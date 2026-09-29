@@ -1,0 +1,32 @@
+{
+  "name": "vestra/ghasedak-laravel",
+  "description": "Laravel SMS package for Ghasedak SMS template-based web service.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["laravel", "sms", "ghasedak", "ghasedaksms", "otp", "verification"],
+  "authors": [{"name": "Vestra", "homepage": "https://vestra.ir"}],
+  "require": {
+    "php": ">=8.1",
+    "illuminate/support": "^10.0|^11.0|^12.0",
+    "illuminate/http": "^10.0|^11.0|^12.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0|^9.0|^10.0",
+    "phpunit/phpunit": "^10.0|^11.0"
+  },
+  "autoload": {
+    "psr-4": {"Vestra\\Ghasedak\\": "src/"}
+  },
+  "autoload-dev": {
+    "psr-4": {"Vestra\\Ghasedak\\Tests\\": "tests/"}
+  },
+  "extra": {
+    "laravel": {
+      "providers": ["Vestra\\Ghasedak\\GhasedakServiceProvider"],
+      "aliases": {"Ghasedak": "Vestra\\Ghasedak\\Facades\\Ghasedak"}
+    }
+  },
+  "scripts": {"test": "phpunit"},
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
